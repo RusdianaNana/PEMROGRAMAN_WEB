@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pemain Bola BARCA</title>
+    <style>
+        /* ===== RESET DASAR ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 2rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            padding: 2rem;
+        }
+
+        /* Reusable card style */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            margin-bottom: 1rem;
+            color: #003366;
+        }
+
+        /* ===== PROFIL (Grid Layout) ===== */
+        #profil {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        #profil article {
+            background: #fff;
+            padding: 1rem;
+            border-left: 4px solid #003366;
+            border-radius: 8px;
+        }
+
+        /* ===== GALERI (Grid Layout) ===== */
+        #galeri {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        #galeri figure {
+            text-align: center;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        #galeri img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* ===== FORM KONTAK ===== */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 0.7rem;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0055a5;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>Website Pemain Bola BARCA</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#profil">Profil Pemain</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- Section: Beranda -->
+        <section id="beranda" class="card">
+            <h2>Selamat Datang di Website Pemain Bola BARCA</h2>
+            <p>Website ini menampilkan informasi mengenai para pemain sepak bola Barcelona.</p>
+        </section>
+
+        <!-- Section: Profil Pemain -->
+        <section id="profil">
+            <article>
+                <h3>Lionel Messi</h3>
+                <p>Legenda Barcelona dengan berbagai rekor gol dan assist.</p>
+            </article>
+
+            <article>
+                <h3>Pedri</h3>
+                <p>Gelandang muda berbakat yang menjadi andalan lini tengah.</p>
+            </article>
+        </section>
+
+        <!-- Section: Galeri -->
+        <section id="galeri">
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_WC2022.jpg" 
+                     alt="Lionel Messi" width="200">
+                <figcaption>Lionel Messi</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Pedri.jpg" 
+                     alt="Pedri" width="200">
+                <figcaption>Pedri</figcaption>
+            </figure>
+        </section>
+
+        <!-- Section: Kontak -->
+        <section id="kontak" class="card">
+            <h2>Kontak</h2>
+            <form>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2025 Website Pemain Bola BARCA</p>
+        <p>
+            Referensi desain: 
+            <a href="https://www.fcbarcelona.com/en/football/first-team/players" target="_blank" style="color:#ffcc00;">
+                Website Resmi FC Barcelona
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
