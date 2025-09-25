@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Pemain Bola BARCA</title>
+    <link rel="stylesheet" href="2409106021_Rusdiana.css">
 </head>
 <body>
     <!-- ===== HEADER ===== -->
@@ -21,59 +22,64 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <main>
-        <!-- Section: Beranda -->
-        <section id="beranda">
+        <!-- Beranda -->
+        <section id="beranda" class="card">
             <h2>Selamat Datang di Website Pemain Bola BARCA</h2>
             <p>Website ini menampilkan informasi mengenai para pemain sepak bola Barcelona.</p>
+            <button id="btnMode" class="btn btn-primary">Ubah ke Dark Mode</button>
         </section>
 
-        <!-- Section: Profil Pemain -->
-        <section id="profil">
+        <!-- Profil Pemain -->
+        <section id="profil" class="card">
             <h2>Profil Pemain</h2>
+            <div class="grid">
+                <!-- Profil Messi -->
+                <article>
+                    <h3>Lionel Messi</h3>
+                   <img src="img/messi.jpg" alt="Lionel Messi" width="200">
+                    <p>Legenda Barcelona dengan berbagai rekor gol dan assist.</p>
+                </article>
 
-            <article>
-                <h3>Lionel Messi</h3>
-                <p>Legenda Barcelona dengan berbagai rekor gol dan assist.</p>
-            </article>
-
-            <article>
-                <h3>Pedri</h3>
-                <p>Gelandang muda berbakat yang menjadi andalan lini tengah.</p>
-            </article>
+                <!-- Profil Pedri -->
+                <article>
+                    <h3>Pedri</h3>
+                    <img src="img/pedri.jpg" alt="Pedri" width="200">
+                    <p>Gelandang muda berbakat yang menjadi andalan lini tengah.</p>
+                </article>
+            </div>
         </section>
 
-        <!-- Section: Galeri -->
-        <section id="galeri">
+        <!-- Galeri -->
+        <section id="galeri" class="card">
             <h2>Galeri Pemain</h2>
-
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_WC2022.jpg" 
-                     alt="Lionel Messi" width="200">
-                <figcaption>Lionel Messi</figcaption>
-            </figure>
-
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Pedri.jpg" 
-                     alt="Pedri" width="200">
-                <figcaption>Pedri</figcaption>
-            </figure>
+            <div class="grid">
+                <figure>
+                    <img src="img/messi.jpg" alt="Lionel Messi" width="200">
+                    <figcaption>Lionel Messi</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/pedri.jpg" alt="Pedri" width="200">
+                    <figcaption>Pedri</figcaption>
+                </figure>
+            </div>
         </section>
 
-        <!-- Section: Kontak -->
-        <section id="kontak">
+        <!-- Kontak -->
+        <section id="kontak" class="card">
             <h2>Kontak</h2>
-            <form>
-                <label for="nama">Nama:</label><br>
-                <input type="text" id="nama" name="nama" required><br><br>
+            <form id="formKontak">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="pesan">Pesan:</label><br>
-                <textarea id="pesan" name="pesan" rows="4" cols="30"></textarea><br><br>
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4"></textarea>
 
-                <button type="submit">Kirim</button>
+                <button type="submit" class="btn btn-primary">Kirim</button>
             </form>
+            <p id="outputPesan" class="pesan"></p>
         </section>
     </main>
 
@@ -87,5 +93,8 @@
             </a>
         </p>
     </footer>
+
+    <!-- Hubungkan dengan JS -->
+    <script src="2409106021_Rusdiana.js"></script>
 </body>
 </html>
