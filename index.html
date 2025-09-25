@@ -4,173 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Pemain Bola BARCA</title>
-    <style>
-        /* ===== RESET DASAR ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-
-        /* ===== WARNA UTAMA ===== */
-        :root {
-            --biru: #003366;
-            --merah: #cc0000;
-            --kuning: #ffcc00;
-        }
-
-        /* ===== HEADER ===== */
-        header {
-            background: linear-gradient(to right, var(--biru), var(--merah));
-            color: white;
-            padding: 1rem 2rem;
-        }
-
-        header h1 {
-            margin-bottom: 0.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            color: var(--kuning);
-        }
-
-        /* ===== MAIN CONTENT ===== */
-        main {
-            padding: 2rem;
-        }
-
-        /* Reusable card style */
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        section h2 {
-            margin-bottom: 1rem;
-            color: var(--biru);
-        }
-
-        /* ===== PROFIL (Grid Layout) ===== */
-        #profil {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        #profil article {
-            background: #fff;
-            padding: 1rem;
-            border-left: 6px solid var(--merah);
-            border-radius: 8px;
-        }
-
-        #profil h3 {
-            color: var(--biru);
-        }
-
-        /* ===== GALERI (Grid Layout) ===== */
-        #galeri {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        #galeri figure {
-            text-align: center;
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border: 2px solid var(--biru);
-        }
-
-        #galeri img {
-            max-width: 100%;
-            border-radius: 10px;
-            border: 3px solid var(--merah);
-        }
-
-        figcaption {
-            margin-top: 0.5rem;
-            font-weight: bold;
-            color: var(--biru);
-        }
-
-        /* ===== FORM KONTAK ===== */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        input, textarea {
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .btn {
-            padding: 0.7rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .btn-primary {
-            background: linear-gradient(to right, var(--biru), var(--merah));
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(to right, var(--merah), var(--biru));
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: linear-gradient(to right, var(--biru), var(--merah));
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            main {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="2409106021_Rusdiana.css">
 </head>
 <body>
     <!-- ===== HEADER ===== -->
@@ -188,44 +22,52 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <main>
-        <!-- Section: Beranda -->
+        <!-- Beranda -->
         <section id="beranda" class="card">
             <h2>Selamat Datang di Website Pemain Bola BARCA</h2>
             <p>Website ini menampilkan informasi mengenai para pemain sepak bola Barcelona.</p>
+            <button id="btnMode" class="btn btn-primary">Ubah ke Dark Mode</button>
         </section>
 
-        <!-- Section: Profil Pemain -->
-        <section id="profil">
-            <article>
-                <h3>Lionel Messi</h3>
-                <p>Legenda Barcelona dengan berbagai rekor gol dan assist.</p>
-            </article>
+        <!-- Profil Pemain -->
+        <section id="profil" class="card">
+            <h2>Profil Pemain</h2>
+            <div class="grid">
+                <!-- Profil Messi -->
+                <article>
+                    <h3>Lionel Messi</h3>
+                   <img src="img/messi.jpg" alt="Lionel Messi" width="200">
+                    <p>Legenda Barcelona dengan berbagai rekor gol dan assist.</p>
+                </article>
 
-            <article>
-                <h3>Pedri</h3>
-                <p>Gelandang muda berbakat yang menjadi andalan lini tengah.</p>
-            </article>
+                <!-- Profil Pedri -->
+                <article>
+                    <h3>Pedri</h3>
+                    <img src="img/pedri.jpg" alt="Pedri" width="200">
+                    <p>Gelandang muda berbakat yang menjadi andalan lini tengah.</p>
+                </article>
+            </div>
         </section>
 
-        <!-- Section: Galeri -->
-        <section id="galeri">
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_WC2022.jpg" 
-                     alt="Lionel Messi">
-                <figcaption>Lionel Messi</figcaption>
-            </figure>
-
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Pedri.jpg" 
-                     alt="Pedri">
-                <figcaption>Pedri</figcaption>
-            </figure>
+        <!-- Galeri -->
+        <section id="galeri" class="card">
+            <h2>Galeri Pemain</h2>
+            <div class="grid">
+                <figure>
+                    <img src="img/messi.jpg" alt="Lionel Messi" width="200">
+                    <figcaption>Lionel Messi</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/pedri.jpg" alt="Pedri" width="200">
+                    <figcaption>Pedri</figcaption>
+                </figure>
+            </div>
         </section>
 
-        <!-- Section: Kontak -->
+        <!-- Kontak -->
         <section id="kontak" class="card">
             <h2>Kontak</h2>
-            <form>
+            <form id="formKontak">
                 <label for="nama">Nama:</label>
                 <input type="text" id="nama" name="nama" required>
 
@@ -237,6 +79,7 @@
 
                 <button type="submit" class="btn btn-primary">Kirim</button>
             </form>
+            <p id="outputPesan" class="pesan"></p>
         </section>
     </main>
 
@@ -245,10 +88,13 @@
         <p>&copy; 2025 Website Pemain Bola BARCA</p>
         <p>
             Referensi desain: 
-            <a href="https://www.fcbarcelona.com/en/football/first-team/players" target="_blank" style="color:var(--kuning);">
+            <a href="https://www.fcbarcelona.com/en/football/first-team/players" target="_blank">
                 Website Resmi FC Barcelona
             </a>
         </p>
     </footer>
+
+    <!-- Hubungkan dengan JS -->
+    <script src="2409106021_Rusdiana.js"></script>
 </body>
 </html>
