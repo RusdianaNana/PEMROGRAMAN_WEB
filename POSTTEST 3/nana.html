@@ -1,0 +1,125 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avengers Login</title>
+  <link rel="stylesheet" href="2409106002_RenayaPutriAlika.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://wallpapers.com/images/hd/avengers-logo-4k-4m6e7gk8w2qph0n6.jpg') no-repeat center center/cover;
+    }
+    .auth-container {
+      width: 350px;
+      background: rgba(0,0,0,0.8);
+      padding: 2rem;
+      border-radius: 12px;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255,0,0,0.7);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #f1c40f;
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      background: #e74c3c;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c0392b;
+    }
+    .switch {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .switch a {
+      color: #3498db;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Login Form -->
+    <div id="loginForm" class="form active">
+      <h2>Avengers Login</h2>
+      <input type="text" id="loginUser" placeholder="Username" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+      <div class="switch">
+        Belum punya akun? <a onclick="showRegister()">Daftar</a>
+      </div>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" class="form" style="display:none;">
+      <h2>Daftar Avengers</h2>
+      <input type="text" id="regUser" placeholder="Username" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <button onclick="register()">Daftar</button>
+      <div class="switch">
+        Sudah punya akun? <a onclick="showLogin()">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showRegister(){
+      document.getElementById("loginForm").style.display="none";
+      document.getElementById("registerForm").style.display="block";
+    }
+    function showLogin(){
+      document.getElementById("registerForm").style.display="none";
+      document.getElementById("loginForm").style.display="block";
+    }
+
+    function register(){
+      const user = document.getElementById("regUser").value;
+      const pass = document.getElementById("regPass").value;
+      if(user && pass){
+        localStorage.setItem("username", user);
+        localStorage.setItem("password", pass);
+        alert("Registrasi berhasil! Silakan login.");
+        showLogin();
+      } else {
+        alert("Isi semua data!");
+      }
+    }
+
+    function login(){
+      const user = document.getElementById("loginUser").value;
+      const pass = document.getElementById("loginPass").value;
+      const storedUser = localStorage.getItem("username");
+      const storedPass = localStorage.getItem("password");
+
+      if(user === storedUser && pass === storedPass){
+        alert("Selamat datang, " + user + "!");
+        window.location.href = "index.html"; // masuk ke katalog Marvel
+      } else {
+        alert("Username atau password salah!");
+      }
+    }
+  </script>
+</body>
+</html>
+```
